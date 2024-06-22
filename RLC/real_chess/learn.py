@@ -140,7 +140,7 @@ class TD_search(object):
             new_state_value = self.agent.predict(sucstate)
 
             error = reward + self.gamma * new_state_value - state_value
-            error = np.float(np.squeeze(error))
+            error = np.float64(np.squeeze(error))
 
             turncount += 1
             if turncount > maxiter and not episode_end:
